@@ -1,0 +1,42 @@
+body {
+	font-family: verdana;
+}	
+
+#access{
+	border: 2px solid black;
+	position: absolute;
+	right: 50px;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+
+#describe{
+	position: absolute;
+	left: 50px;
+	right: 300px;
+	
+}
+
+#store{
+	top: 850px;
+	left: 751px;
+	border: 2px solid black;
+	position: absolute;
+	padding-left: 100px;
+	padding-right: 30px;
+	
+}
+
+#icon{
+	width: 68px;
+}
+
+#contactinfo{
+	top: 850px;
+	right:711px;
+	border: 2px solid black;
+	position: absolute;
+	padding-left: 30px;
+	padding-right: 100px;
+}

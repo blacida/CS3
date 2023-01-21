@@ -1,0 +1,79 @@
+body {
+	font-family: verdana;
+	background-color: rgb(137,207,240);
+}	
+
+h1 {
+	text-decoration: underline;
+}
+
+#accesshere {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	float: right;
+	width: 250px;
+}
+
+li a:link{
+	display: block;
+	color: black;
+	padding: 10px;
+	text-decoration: none;
+}
+li a:visited{
+	color: black;
+}
+li a:hover{
+	background-color: rgb(38,70,83);
+	color: white;
+}
+
+#describe{
+	position: absolute;
+	padding-top: 15px;
+	left: 50px;
+	right: 300px;
+
+}
+
+
+
+#consult{
+	position: absolute;
+	left: 525px;
+	top: 450px;
+
+
+	
+}	
+
+#survey{
+	position: absolute;
+	right: 515px;
+	top: 450px;
+}	
+
+#brice{
+	width: 250px;
+}
+#mark{
+	width:250px;
+}
+
+#fb { 
+	background: url(../images/sprite.png) no-repeat 0 -110px;
+	height: 100px; 
+	width: 100px;
+	color: transparent; 
+}
+			
+footer{
+	position: relative;
+	top: 650px;
+	padding: 10px; 
+	text-align: center; 
+	font-size: 15px; 
+	border-top-style: none; 
+	clear:both;
+}

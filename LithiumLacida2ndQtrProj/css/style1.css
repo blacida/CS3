@@ -1,0 +1,58 @@
+body{
+	font-family: Verdana;
+	background-image: url('../images/bkgimg.png');
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+	
+}	
+
+h1 {
+	text-decoration: underline;
+}
+
+#accesshere {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	float: right;
+	width: 250px;
+
+	
+}
+
+li a:link{
+	display: block;
+	color: black;
+	padding: 10px;
+	text-decoration: none;
+}
+li a:visited{
+	color: black;
+}
+li a:hover{
+	background-color: rgb(79, 92, 107);
+	color: white;
+}
+
+
+#describe{
+	position: absolute;
+	padding-top: 15px;
+	left: 50px;
+	right: 300px;
+
+}
+
+
+	
+footer{
+	position: relative;
+	top: 650px;
+	padding: 10px; 
+	text-align: center; 
+	font-size: 15px; 
+	background: white; 
+	border-top-style: none; 
+	clear:both;
+}

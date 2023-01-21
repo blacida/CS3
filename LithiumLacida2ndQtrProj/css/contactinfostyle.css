@@ -1,0 +1,77 @@
+body{
+	font-family: Verdana;
+
+}
+h1 {
+	text-decoration: underline;
+}
+
+#accesshere {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	float: right;
+	width: 250px;
+
+	
+}
+
+li a:link{
+	display: block;
+	color: black;
+	padding: 10px;
+	text-decoration: none;
+}
+li a:visited{
+	color: black;
+}
+li a:hover{
+	background-color: rgb(79, 92, 107);
+	color: white;
+}
+
+a{
+	text-decoration: none;
+}
+
+#describe{
+	position: absolute;
+	padding-top: 15px;
+	left: 50px;
+	right: 300px;
+
+}
+
+
+#socmeds{
+	margin: 100px;
+	font-size: 12px;
+}
+
+#idol{
+	color: white;
+}
+#fb:hover{
+	background: url('../images/sprite.png') no-repeat 0 -110px;
+	width: 100px;
+	height: 100px;
+	font-size: 0px;
+}
+
+#insta:hover{
+	background: url('../images/sprite.png') no-repeat -315px -110px;
+	width: 100px;
+	height: 100px;
+	font-size: 0px;
+}
+
+footer{
+	position: relative;
+	top: 100px;
+	padding: 5px; 
+	text-align: center; 
+	font-size: 15px; 
+	 
+	border-top-style: none; 
+	clear:both;
+}

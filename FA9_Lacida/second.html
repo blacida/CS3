@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<meta 
+<body>
+	<button onclick="next()"> NEXT </button>
+	<button onclick="prev()"> PREVIOUS </button>
+	
+	<img id="real" src="https://media.newyorker.com/photos/6344778eebf0c2ba7bdd40eb/master/w_960,c_limit/Larson-Barney-Docuseries.jpg"></img>
+	<style> 
+	img{
+		height: 400px;
+		width: 300px;
+	}
+	</style>
+	<script>
+		function next(){
+			document.getElementById("real").src = "https://sportshub.cbsistatic.com/i/2023/02/13/a0d64232-a8ba-484f-a294-f5cb2a425de0/barney-first-look.jpg?auto=webp&width=1846&height=1200&crop=1.538:1,smart";
+		}
+		function prev(){
+			document.getElementById("real").src = "https://media.newyorker.com/photos/6344778eebf0c2ba7bdd40eb/master/w_960,c_limit/Larson-Barney-Docuseries.jpg";
+		}
+	</script>
+</body>
+</html>

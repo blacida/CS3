@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Lacida_FA10</title>
+</head>
+<body>
+	<button onclick="randgen()"> Random Generat A Number </button>
+	<p id="randomNumber"></p>
+	<p id="breakDown"></p>
+<script>
+	var a;
+	var b;
+	
+	function randgen(){
+		a=Math.floor(Math.random()*1001);
+		b=String(a).split('');
+		document.getElementById("randomNumber").innerHTML="Randomly Generated Number:" + a;
+		document.getElementById("breakDown").innerHTML="Breakdown:" + b.slice(-3,-2)*100+","+b.slice(-2,-1)*10+","+b.slice(-1);
+		}
+</script>
+</body>
+</html>

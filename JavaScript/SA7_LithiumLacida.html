@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Numerology</title>
+		<!-- provide the necessary meta tags -->
+        <style>
+        	body {background: lightblue; 
+            	text-align: center;
+            	font-family: arial;
+                color: navy;
+            }
+            button {padding: 10px; background:violet }
+            span {font-size: 0.5em; color: maroon}
+        </style>
+
+	</head>
+<body>
+	<h1> Your Fortune is in your name </h1>
+	<h2> Your Name is: <span id="thename"> </span></h2>
+    <h2> Today's fortune: <span id="fortune"> </span></h2>
+    
+    <button onclick = "myFunction()"> Click here to enter your name </button>
+     <script>
+    	function myFunction() {
+			var name = prompt("Please enter your name"); // asks the name of user
+			document.getElementById("thename").innerHTML = name;
+		
+			var length = name.length; // returns the length of the user's name
+			var num = length; // declares the object to be useds
+	
+			while(num > 9) {
+				num = (num - (num % 10)) / 10 + (num % 10); // this line of code will return the final single digit 
+			}	
+        
+			switch(num) { // assigns a fortune for each number (single digit)
+				case 0:
+					document.getElementById("fortune").innerHTML = "kamukha mo si bogart";
+				break;
+				case 1:
+					document.getElementById("fortune").innerHTML = "pogi mo, parang si sir Jimmy";
+				break;
+				case 2:
+					document.getElementById("fortune").innerHTML = "smart";
+				break;
+				case 3:
+					document.getElementById("fortune").innerHTML = "rech";
+				break;
+				case 4:
+					document.getElementById("fortune").innerHTML = "what if...";
+				break;
+				case 5:
+					document.getElementById("fortune").innerHTML = "panget";
+				break;
+				case 6:
+					document.getElementById("fortune").innerHTML = "time to self-reflect";
+				break;
+				case 7:
+					document.getElementById("fortune").innerHTML = "ang mga ibon, ay lumilipad";
+				break;
+				case 8:
+					document.getElementById("fortune").innerHTML = "pogi mo, parang si papang";
+				break;
+				case 9:
+					document.getElementById("fortune").innerHTML = "1234567890";
+				break;
+		
+			}
+		}9
+
+    </script>
+    
+</body>
+</html>

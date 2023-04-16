@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<style>
+	
+	th, td {
+		border: 3px solid black;
+		padding: 5px;
+		text-align: center;
+		}
+	th {
+		background-color: grey;
+		}
+		
+</style>
+
+<body>
+	<label for="sNum">Starting Number:</label>
+	<input type="number" id="sNum">
+	<label for="eNum">Ending Number:</label>
+	<input type="number" id="eNum">
+	<button onclick="table()">Click Here When Ready</button>
+	<div id="table"></div>
+
+	<script>
+		function table() {
+			const sNum = parseInt(document.getElementById("sNum").value);
+			const eNum = parseInt(document.getElementById("eNum").value);
+			const tableElement = document.getElementById("table");
+			
+			if (isNaN(sNum) || isNaN(eNum) || sNum < 2 || eNum > 10 || sNum > eNum) {
+				alert("Please enter numbers between 2 and 10");
+				return;
+			}
+			
+			let tableHTML = "<table><tr><th>&nbsp;</th>";
+			for (let i = sNum; i <= eNum; i++) {
+				tableHTML += "<th>" + i + "</th>";
+			}
+			tableHTML += "</tr>";
+			
+			for (let i = 1; i <= 10; i++) {
+				tableHTML += "<tr><td>" + i + "</td>";
+				for (let j = sNum; j <= eNum; j++) {
+					tableHTML += "<td>" + (i * j) + "</td>";
+				}
+				tableHTML += "</tr>";
+			}
+			tableHTML += "</table>";
+			tableElement.innerHTML = tableHTML;
+		}
+	</script>
+</body>
+</html>

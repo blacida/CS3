@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<style>
+	
+	th, td {
+		border: 1px solid black;
+		}
+		
+</style>
+
+<body>
+	<input type="number" id="numA" min="2" max="10"></input>
+	<input type="number" id="numB" min="2" max="10"></input>
+	<br>
+	<button onclick="table()">CREATE A TABLE</button>
+	
+	<script>
+		var buongtable
+		function table() {
+			if(buongtable){
+				buongtable.remove();
+			}
+			numA = document.getElementById('numA').value;
+			numB = document.getElementById('numB').value;
+			
+			if(numA < 2 || numA > 10 || numB < 2 || numB > 10){
+				alert("Please enter a number between 2 and 10");
+			} else{ 
+				buongtable = document.createElement('table');
+				document.body.appendChild(buongtable);
+				for(var i = 1; i<=numA; i++){
+					var rows = document.createElement('tr');
+					for(var j = 1; j<=numB; j++){
+						var cells = document.createElement('td');
+						cells.innerHTML = j*i;
+						rows.appendChild(cells);
+					}
+					buongtable.appendChild(rows);
+				}
+			}
+		}
+	</script>
+</body>
+</html>

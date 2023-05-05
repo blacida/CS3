@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="BIPL">
+    </head>
+    <body>
+        <script>
+  
+            function findsubstring(string,subStringA,subStringB,subStringC) {
+                return string.includes(subStringA)||string.includes(subStringB)||string.includes(subStringC);
+            }
+     
+				function getIndexOfFirstSubstring(array, subStringA, subStringB, subStringC) {
+					var indexA =array.indexOf(subStringA);
+					var indexB =array.indexOf(subStringB);
+					var indexC =array.indexOf(subStringC);
+		
+					var allIndex =[indexA,indexB,indexC];
+						allIndex =allIndex.sort();       
+						allIndex =allIndex.filter(function(index){
+					return index !==-1;
+					});
+            
+				return allIndex[0];
+				}
+            
+        
+				var arr =[];
+				var indexEnd;
+            
+
+				var sequence =prompt("Please Enter Genetic Sequence: ").toUpperCase();
+      
+				var arraySequence =[];
+					sequence =sequence.slice(sequence.indexOf("AUG"), sequence.length);
+			for (var i = 0; i < sequence.length; i+=3) {
+                arraySequence.push(sequence.slice(i, i + 3));
+            }
+            if ("AUG" == sequence.slice(0, 3) && findsubstring(arraySequence, "UAG", "UAA", "UGA")) {           
+				indexEnd = getIndexOfFirstSubstring(arraySequence, "UAG", "UAA", "UGA");
+           
+            for (var i in arraySequence) {
+                if (i > indexEnd) {
+                    arraySequence.pop(arraySequence[i]);
+                }
+            }          
+				arr = arraySequence.map(function(codns) {
+					return `"${codns}"`;
+				});
+				document.write("[" + arr.join(`, `) + "]<br>");
+    
+            for (var i in arraySequence){
+				switch(arraySequence[i]) {
+					case "UUU":
+					case "UUC":
+						document.write(arraySequence[i] + " --> Phe" + "<br>");
+            		break;
+					case "UUA":
+					case "UUG":
+					case "CUU":
+					case "CUC":
+					case "CUA":
+					case "CUG":
+						document.write(arraySequence[i] + " --> Leu" + "<br>");
+					break;
+					case "AUU":
+					case "AUC":
+					case "AUA":
+						document.write(arraySequence[i] + " --> Ile" + "<br>");
+            		break;
+					case "AUG":
+						document.write(arraySequence[i] + " --> Met" + "<br>");
+						break;
+					case "GUU":
+					case "GUC":
+					case "GUA":
+					case "GUG":
+						document.write(arraySequence[i] + " --> Val" + "<br>");
+            		break;
+					case "UCU":
+					case "UCC":
+					case "UCA":
+					case "UCG":
+					case "AGU":
+					case "AGC":
+						document.write(arraySequence[i] + " --> Ser" + "<br>");
+					break;
+					case "CCU":
+					case "CCC":
+					case "CCA":
+					case "CCG":
+						document.write(arraySequence[i] + " --> Pro" + "<br>");
+            		break;
+					case "ACU":
+					case "ACC":
+					case "ACA":
+					case "ACG":
+						document.write(arraySequence[i] + " --> Thr" + "<br>");
+            		break;
+					case "GCU":
+					case "GCC":
+					case "GCA":
+					case "GCG":
+						document.write(arraySequence[i] + " --> Ala" + "<br>");
+					break;
+					case "UAU":
+					case "UAC":
+						document.write(arraySequence[i] + " --> Tyr" + "<br>");
+					break;
+					case "UAA":
+					case "UAG":
+					case "UGA":
+						document.write(arraySequence[i] + " --> Stop" + "<br>");
+            		break;
+					case "CAU":
+					case "CAC":
+						document.write(arraySequence[i] + " --> His" + "<br>");
+            		break;
+					case "CAA":
+					case "CAG":
+						document.write(arraySequence[i] + " --> Gln" + "<br>");
+            		break;
+					case "AAU":
+					case "AAC":
+						document.write(arraySequence[i] + " --> Asn" + "<br>");
+            		break;
+					case "AAA":
+					case "AAG":
+						document.write(arraySequence[i] + " --> Lys" + "<br>");
+					break;
+					case "GAU":
+					case "GAC":
+						document.write(arraySequence[i] + " --> Asp" + "<br>");
+            		break;
+					case "GAA":
+					case "GAG":
+						document.write(arraySequence[i] + " --> Glu" + "<br>");
+            		break;
+					case "UGU":
+					case "UGC":
+						document.write(arraySequence[i] + " --> Leu" + "<br>");
+            		break;
+					case "UGG":
+						document.write(arraySequence[i] + " --> Trp" + "<br>");
+            		break;
+					case "CGU":
+					case "CGC":
+					case "CGA":
+					case "CGG":
+					case "AGA":
+					case "AGG":
+						document.write(arraySequence[i] + " --> Arg" + "<br>");
+            		break;
+					case "GGU":
+					case "GGC":
+					case "GGA":
+					case "GGG":
+						document.write(arraySequence[i] + " --> Gly" + "<br>");
+            		break;
+						default:
+							alert("Error")
+            		break;
+					}
+				}	
+			}
+            else {
+				alert("Error");
+            }
+            	
+            
+        </script>
+    </body>
+</html>

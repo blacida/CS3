@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>log-in</title>
+  <style>
+    
+	body {
+      font-family: verdana ;
+	  background-image: url("data:image/png;base64,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");
+      background-repeat: no-repeat;
+	  margin: 0;
+      padding: 0;
+    }
+    h1 {
+      margin-top: 0;
+      text-align: center;
+    }
+    form {
+      margin: 20px auto;
+      max-width: 600px;
+      padding: 20px;
+    }
+    fieldset {
+      border: none;
+      margin: 0;
+      padding: 0;
+    }
+    legend {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input, textarea, select {
+      display: block;
+      font-size: 16px;
+      padding: 10px;
+      width: 100%;
+    }
+    input:focus, textarea:focus, select:focus {
+      border-color: green;
+    }
+    input:invalid, textarea:invalid, select:invalid {
+      border-color: red;
+    }
+    #output {
+      margin: 20px auto;
+      max-width: 600px;
+      padding: 20px;
+      text-align: center;
+    }
+    #output p {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    button[type=submit], button[type=reset] {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+      padding: 10px 20px;
+    }
+    button[type=submit]:hover, button[type=reset]:hover {
+      background-color: #3e8e41;
+    }
+    button[type=submit]:focus, button[type=reset]:focus {
+      outline: none;
+    }
+
+  </style>
+</head>
+<body>
+  <form id="signup-form">
+    <fieldset>
+     
+      <div class="inputs">
+        <label for="name">Name:</label>
+        <input type="text" id="name" onblur="inputSure(diswan)" onfocus="removeValid(diswan)" required>
+      </div>
+
+      <div class="inputs">
+        <label for="username">Username:</label>
+        <input type="text" id="username" onblur="inputSure(diswan)" onfocus="removeValid(diswan)" required>
+      </div>
+
+      <div class="inputs">
+        <label for="gender">Gender:</label>
+        <select id="gender" onblur="inputSure(diswan)" onfocus="removeValid(diswan)" required>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="prefer-not-to-mention">Prefer Not to Mention</option>
+        </select>
+      </div>
+
+      <div class="inputs">
+        <label for="password">Password:</label>
+        <input type="password" id="password" onblur="inputSure(diswan)" onfocus="removeValid(diswan)" required>
+      </div>
+
+      <div class="inputs">
+        <label for="email">Email:</label>
+        <input type="email" id="email" onblur="inputSure(diswan)" onfocus="removeValid(diswan)" required>
+      </div>
+
+      <div class="inputs">
+        <label for="address">Address:</label>
+        <input type="text" id="address" onblur="inputSure(diswan)" onfocus="removeValid(diswan)" required>
+      </div>
+
+      <div class="inputs">
+        <label for="interest">Interest:</label>
+        <textarea id="interest" rows="4" onblur="inputSure(diswan)" onfocus="removeValid(diswan)" required></textarea>
+      </div>
+
+      <div class="inputs">
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset" onclick="clearForm()">
+      </div>
+    </fieldset>
+  </form>
+
+  <div id="output"></div>
+
+  <script>
+    function inputSure(element) {
+      if (element.value === '') {
+        element.classList.add('error');
+      } else {
+        element.classList.remove('error');
+        element.classList.add('success');
+      }
+    }
+
+    function removeValid(element) {
+      element.classList.remove('error');
+      element.classList.remove('success');
+    }
+
+    function clearforms() {
+      document.getElementById('signup-form').reset();
+      document.getElementById('output').innerHTML = '';
+    }
+
+    document.getElementById('signup-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      var name = document.getElementById('name').value;
+      var username = document.getElementById('username').value;
+      var gender = document.getElementById('gender').value;
+      var password = document.getElementById('password').value;
+      var email = document.getElementById('email').value;
+      var address = document.getElementById('address').value;
+      var interest = document.getElementById('interest').value;
+	  var output = document.getElementById('output');
+      output.innerHTML = '<h2>Sign-Up Information:</h2>';
+      output.innerHTML += '<p><strong>Name:</strong> ' + name + '</p>';
+      output.innerHTML += '<p><strong>Username:</strong> ' + username + '</p>';
+      output.innerHTML += '<p><strong>Gender:</strong> ' + gender + '</p>';
+      output.innerHTML += '<p><strong>Password:</strong> ' + password + '</p>';
+      output.innerHTML += '<p><strong>Email:</strong> ' + email + '</p>';
+      output.innerHTML += '<p><strong>Address:</strong> ' + address + '</p>';
+      output.innerHTML += '<p><strong>Interest:</strong> ' + interest + '</p>';
+    });
+  </script>
+</body>
+</html>
